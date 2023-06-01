@@ -96,7 +96,7 @@ usuario1: {
 
   buttonPerfil: {
     color: '#000000',
-    backgroundColor: '#6FB1FF',
+    backgroundColor: '#ffffff',
     borderRadius: 10,
     accessibilityLabel: 'Botão para editar perfil',
     width: 150,
