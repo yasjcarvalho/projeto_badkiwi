@@ -62,6 +62,19 @@ export default function App() {
             headerTitle: 'Ingressos Online'
           }}
         />
+
+        <Tab.Screen
+          name="Cadastrar Usuário"
+          component={CadastrarUsuario}
+          options={{
+            tabBarLabelStyle: {
+              fontSize: 16,
+            },
+            headerTitle: 'Cadastrar Usuário',
+            headerTitleAlign:"center",
+          }}
+        />
+
       </Tab.Navigator>
     </NavigationContainer>
   )
