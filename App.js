@@ -5,6 +5,7 @@ import Profile from './components/Profile'
 import Home from './components/Home'
 import Bairros from './components/Bairros'
 import Login from './components/Login'
+import CadastrarUsuario from './components/CadastrarUsuario'
 
 const Tab = createBottomTabNavigator()
 
