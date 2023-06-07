@@ -68,10 +68,11 @@ const styles = StyleSheet.create({
     height: 140,
   },
 
-usuario1: {
-  flex: 0.443,
+  usuario1: {
+    flex: 0.443,
 
-},
+  },
+  
   usuario: {
     flex: 0.567,
         alignItems: 'flex-start', 

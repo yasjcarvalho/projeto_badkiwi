@@ -1,15 +1,47 @@
-import { StylesSheet, View, Text, Pressable } from 'react-native';
+import { View } from 'react-native';
 
 
-function Inicial() {
-  return (
-    <View>
-      
+
+const Home = ({navigation}) => {
+  
     
+  return (
+      <View style = {styles.container}>
+       <h1></h1>
+
+
+
+
+
+
+
+
+
+
+      </View>
+
       
-   
-    </View>
+
   );
 }
+
+const style = StyleSheet.create({
+
+  container:{
+    flex: 1,
+    backgroundColor: "#6FB1FF",
+    justifyContent:"center",
+    alignItems:"center"
+  },
+
+
+
+
+
+
+
+
+
+})
 
 export default Inicial;

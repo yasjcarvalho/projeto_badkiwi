@@ -4,15 +4,15 @@ import { TextInput, Pressable,  } from 'react-native-paper';
 
 
 const CadastroUsuario = ({navigation}) => {
-  const [senha, setSenha] = useState(" ")
+  
     
   return (
       <View style = {styles.container}>
         <SafeAreaView maxLength={40}>
-          <TextInput style={styles.input} placeholder="nome:" />
+          <TextInput  style={styles.input} placeholder="nome:" />
         </SafeAreaView>
         <SafeAreaView maxLength={40}>
-          <TextInput style={styles.input} placeholder="Sobrenome:" />
+          <TextInput  style={styles.input} placeholder="Sobrenome:" />
         </SafeAreaView>
         <SafeAreaView maxLength={40}>
           <TextInput style={styles.input} placeholder="Data de nascimento:" />
@@ -69,11 +69,9 @@ const styles = StyleSheet.create({
     height: 45,
     width: 250,
     borderRadius: 8,
-    //backgroundColor: '#fff',
+    backgroundColor: '#fff',
     paddingHorizontal: 16,
     marginBottom: 16,
-    color:"black" ,
-
   },
 
   cadastrar: {
