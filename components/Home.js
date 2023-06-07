@@ -1,4 +1,6 @@
 import { View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Text } from 'react-native-paper';
 
 
 
@@ -7,7 +9,7 @@ const Home = ({navigation}) => {
     
   return (
       <View style = {styles.container}>
-       <h1></h1>
+        <Text></Text>
 
 
 
@@ -25,7 +27,7 @@ const Home = ({navigation}) => {
   );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
 
   container:{
     flex: 1,
@@ -34,14 +36,6 @@ const style = StyleSheet.create({
     alignItems:"center"
   },
 
-
-
-
-
-
-
-
-
 })
 
-export default Inicial;
+export default Home;
