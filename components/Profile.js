@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     height: 36,
     textAlign: 'center',
     paddingTop: 6,
-    border: 'solid #000000',
+    border: 'solid #0ffffff',
   },
 
 
