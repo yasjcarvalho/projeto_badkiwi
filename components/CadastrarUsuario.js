@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { View, SafeAreaView, StyleSheet, Button} from 'react-native';
 import { TextInput, Pressable,  } from 'react-native-paper';
+import Icon from "react-native-vector-icons/AntDesign"
 
 
 const CadastroUsuario = ({navigation}) => {
@@ -27,9 +28,7 @@ const CadastroUsuario = ({navigation}) => {
           <TextInput activeOutlineColor={"red"} style={styles.input} placeholder="E-mail:" />
         </SafeAreaView>
 
-       
-        <Button
-         
+        <Button  
          title="CADASTRAR"
          color="#37567D"
          onPress={() => {

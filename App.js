@@ -11,69 +11,44 @@ const Tab = createBottomTabNavigator()
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator initialRouteName="Home">
+    <NavigationContainer screenOptions={{
+      tabBarLabelStyle: {
+        fontSize: 16,
+        textAlign: 'center'
+      },
+      headerTitle: 'Ingressos Online',
+      }}>
+
+      <Tab.Navigator initialRouteName="Home" screenOptions={{headerTitleAlign:"center"}}>
+        
+
         <Tab.Screen
           name="Home"
           component={Home}
-          options={{
-            tabBarLabelStyle: {
-              fontSize: 16,
-              textAlign: 'center'
-            },
-            headerTitle: 'Ingressos Online'
-            // headerTitleStyle:
-            // {
-            // justifyContent: 'center',
-            // }
-          }}
+          options={{ }}
         />
         <Tab.Screen
           name="Bairros"
           component={Bairros}
-          options={{
-            tabBarLabelStyle: {
-              fontSize: 16,
-              textAlign: 'center'
-            },
-            headerTitle: 'Ingressos Online'
-          }}
+          options={{ }}
         />
 
         <Tab.Screen
           name="Profile"
           component={Profile}
-          options={{
-            tabBarLabelStyle: {
-              fontSize: 16,
-              textAlign: 'center'
-            },
-            headerTitle: 'Ingressos Online'
-          }}
+          options={{ }}
         />
 
         <Tab.Screen
           name="Login"
           component={Login}
-          options={{
-            tabBarLabelStyle: {
-              fontSize: 16,
-              textAlign: 'center'
-            },
-            headerTitle: 'Ingressos Online'
-          }}
+          options={{ }}
         />
 
         <Tab.Screen
           name="Cadastrar Usuário"
           component={CadastrarUsuario}
-          options={{
-            tabBarLabelStyle: {
-              fontSize: 16,
-            },
-            headerTitle: 'Cadastrar Usuário',
-            headerTitleAlign:"center",
-          }}
+          options={{ }}
         />
 
       </Tab.Navigator>
