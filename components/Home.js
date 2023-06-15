@@ -1,15 +1,32 @@
-import { StylesSheet, View, Text, Pressable } from 'react-native';
+import { View,StyleSheet } from 'react-native';
 
 
-function Inicial() {
-  return (
-    <View>
-      
+const Home = ({navigation}) => {
+  
     
-      
-   
+  return (
+
+    <View style = {styles.container}>  
+
+
+
+
     </View>
+
+      
+
   );
 }
 
-export default Inicial;
+const styles = StyleSheet.create({
+
+  container:{
+    flex: 1,
+    backgroundColor: "#6FB1FF",
+    justifyContent:"center",
+    alignItems:"center"
+  },
+
+})
+
+export default Home;
