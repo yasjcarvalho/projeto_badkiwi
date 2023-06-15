@@ -1,8 +1,16 @@
+import React from 'react'
 import { StyleSheet, View, Text, Pressable } from 'react-native'
 import { Button, TextInput } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
 
 function Login() {
+  const navigation = useNavigation()
+
+  const navigateToCadastrarUsuario = () => {
+    navigation.navigate('CadastrarUsuario')
+  }
+
   return (
     <View style={styles.container}>
       <SafeAreaView maxLength={40}>
@@ -12,10 +20,14 @@ function Login() {
         <TextInput style={styles.input} placeholder="Senha:" />
       </SafeAreaView>
 
-      <View styles={styles.buttons1}>
-        <Text>Esqueceu a senha?</Text>
+      <View style={styles.buttons1}>
+        <Pressable>
+          <Text style={styles.esqueceu}>Esqueceu a senha?</Text>
+        </Pressable>
 
-        <Text>Cadastrar Usuário</Text>
+        <Pressable onPress={navigateToCadastrarUsuario}>
+          <Text style={styles.cadastrar}>Cadastrar Usuário</Text>
+        </Pressable>
       </View>
 
       <Button
@@ -38,7 +50,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-
   input: {
     height: 45,
     width: 250,
@@ -46,6 +57,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingHorizontal: 16,
     marginBottom: 16
+  },
+  buttons1: {
+    flexDirection: 'row',
+    width: 250,
+    marginBottom: 16,
+    justifyContent: 'center',
+    marginTop: 10
+  },
+
+  cadastrar: {
+    marginLeft: 5
+  },
+
+  esqueceu: {
+    marginRight: 5
   }
 })
+
 export default Login

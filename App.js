@@ -77,7 +77,7 @@ export default function App() {
         />
 
         <Tab.Screen
-          name="Cadastrar Usuário"
+          name="CadastrarUsuario"
           component={CadastrarUsuario}
           options={{
             tabBarLabel: 'Cadastro Usuário',
