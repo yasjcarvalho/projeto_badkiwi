@@ -34,12 +34,12 @@ const Profile = () => {
         <View style={styles.buttons2}>
           <Pressable //onPress={onPressFunction1}
           >
-            <Text style={styles.buttonPerfil}>Suporte</Text>
+            <Text style={styles.buttonSuporte}>Suporte</Text>
           </Pressable>
 
           <Pressable //onPress={onPressFunction2}
           >
-            <Text style={styles.buttonPerfil}>LGPD</Text>
+            <Text style={styles.buttonLGPD}>LGPD</Text>
           </Pressable>
         </View>
       </View>
@@ -68,10 +68,11 @@ const styles = StyleSheet.create({
     height: 140,
   },
 
-usuario1: {
-  flex: 0.443,
+  usuario1: {
+    flex: 0.443,
 
-},
+  },
+  
   usuario: {
     flex: 0.567,
         alignItems: 'flex-start', 
@@ -79,7 +80,6 @@ usuario1: {
   },
 
   buttons1: {
-    gap: 10,
     flex: 0.5,
     justifyContent: 'center',
     alignItems: 'center',
@@ -88,15 +88,15 @@ usuario1: {
   
   buttons2: {
     flexDirection: 'row',
-    gap: 10,
     justifyContent: 'center',
     alignItems: 'center',
     flex: 0.2,
+  
   },
 
   buttonPerfil: {
     color: '#000000',
-    backgroundColor: '#6FB1FF',
+    backgroundColor: '#ffffff',
     borderRadius: 10,
     accessibilityLabel: 'Botão para editar perfil',
     width: 150,
@@ -104,6 +104,7 @@ usuario1: {
     textAlign: 'center',
     paddingTop: 6,
     border: 'solid #ffffff',
+
   },
 
   buttonSenha: {
@@ -115,8 +116,38 @@ usuario1: {
     height: 36,
     textAlign: 'center',
     paddingTop: 6,
-    border: 'solid #000000',
+    border: 'solid #0ffffff',
+    marginTop: 10,
   },
+
+
+  buttonSuporte: {
+      color: '000000',
+      backgroundColor: '#ffffff',
+      borderRadius: 10,
+      accessibilityLabel: 'Botão para alterar senha',
+      width: 150,
+      height: 36,
+      textAlign: 'center',
+      paddingTop: 6,
+      border: 'solid #0ffffff',
+      marginRight: 5,
+  },
+
+  buttonLGPD: {
+    color: '000000',
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    accessibilityLabel: 'Botão para alterar senha',
+    width: 150,
+    height: 36,
+    textAlign: 'center',
+    paddingTop: 6,
+    border: 'solid #0ffffff',
+    marginLeft: 5,
+
+},
+
 
 
 
