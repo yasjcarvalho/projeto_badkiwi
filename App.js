@@ -17,7 +17,6 @@ export default function App() {
         fontSize: 16,
         textAlign: 'center'
       },
-      headerTitle: 'Ingressos Online',
       }}>
 
       <Tab.Navigator initialRouteName="Home" screenOptions={{headerTitleAlign:"center"}}>
@@ -31,6 +30,7 @@ export default function App() {
             tabBarIcon:({color,size}) => (
               <MaterialCommunityIcons name="home" color={color} size={size} />
             ),
+            headerTitle:"Ingressos Online"
           }}
         />
         <Tab.Screen
@@ -41,6 +41,7 @@ export default function App() {
             tabBarIcon:({color,size}) => (
               <MaterialCommunityIcons name="home-group" color={color} size={size} />
             ),
+            headerTitle:"Ingressos Online"
            }}
         />
 
@@ -52,6 +53,7 @@ export default function App() {
             tabBarIcon:({color,size}) => (
               <MaterialCommunityIcons name="account" color={color} size={size} />
             ),
+            headerTitle:"Ingressos Online"
            }}
         />
 
@@ -63,6 +65,7 @@ export default function App() {
             tabBarIcon:({color,size}) => (
             <MaterialCommunityIcons name="login" color={color} size={size} />
           ),
+          headerTitle:"Ingressos Online"
          }}
         />
 
@@ -74,6 +77,7 @@ export default function App() {
             tabBarIcon:({color,size}) => (
               <MaterialCommunityIcons name="home" color={color} size={size} />
             ),
+            headerTitle:"Ingressos Online"
            }}
         />
 
