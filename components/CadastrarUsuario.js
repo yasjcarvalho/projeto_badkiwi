@@ -36,17 +36,6 @@ const CadastroUsuario = ({navigation}) => {
         }}
         />
           
-        
-
-
-
-
-
-
-
-
-
-
       </View>
 
       

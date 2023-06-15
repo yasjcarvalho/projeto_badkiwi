@@ -34,12 +34,12 @@ const Profile = () => {
         <View style={styles.buttons2}>
           <Pressable //onPress={onPressFunction1}
           >
-            <Text style={styles.buttonPerfil}>Suporte</Text>
+            <Text style={styles.buttonSuporte}>Suporte</Text>
           </Pressable>
 
           <Pressable //onPress={onPressFunction2}
           >
-            <Text style={styles.buttonPerfil}>LGPD</Text>
+            <Text style={styles.buttonLGPD}>LGPD</Text>
           </Pressable>
         </View>
       </View>
@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
   },
 
   buttons1: {
-    gap: 10,
     flex: 0.5,
     justifyContent: 'center',
     alignItems: 'center',
@@ -89,10 +88,10 @@ const styles = StyleSheet.create({
   
   buttons2: {
     flexDirection: 'row',
-    gap: 10,
     justifyContent: 'center',
     alignItems: 'center',
     flex: 0.2,
+  
   },
 
   buttonPerfil: {
@@ -105,6 +104,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 6,
     border: 'solid #ffffff',
+
   },
 
   buttonSenha: {
@@ -117,7 +117,37 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 6,
     border: 'solid #0ffffff',
+    marginTop: 10,
   },
+
+
+  buttonSuporte: {
+      color: '000000',
+      backgroundColor: '#ffffff',
+      borderRadius: 10,
+      accessibilityLabel: 'Botão para alterar senha',
+      width: 150,
+      height: 36,
+      textAlign: 'center',
+      paddingTop: 6,
+      border: 'solid #0ffffff',
+      marginRight: 5,
+  },
+
+  buttonLGPD: {
+    color: '000000',
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    accessibilityLabel: 'Botão para alterar senha',
+    width: 150,
+    height: 36,
+    textAlign: 'center',
+    paddingTop: 6,
+    border: 'solid #0ffffff',
+    marginLeft: 5,
+
+},
+
 
 
 

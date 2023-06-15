@@ -1,26 +1,17 @@
-import { View } from 'react-native';
-import { StyleSheet } from 'react-native';
-import { Text } from 'react-native-paper';
-
+import { View,StyleSheet } from 'react-native';
 
 
 const Home = ({navigation}) => {
   
     
   return (
-      <View style = {styles.container}>
-        <Text></Text>
+
+    <View style = {styles.container}>  
 
 
 
 
-
-
-
-
-
-
-      </View>
+    </View>
 
       
 
