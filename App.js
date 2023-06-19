@@ -7,6 +7,8 @@ import CadastrarUsuario from './components/CadastrarUsuario'
 import Home from './components/Home'
 import Bairros from './components/Bairros'
 import Login from './components/Login'
+import AlterarSenha from './components/AlterarSenha'
+
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator()
@@ -81,6 +83,13 @@ export default function App() {
               <Stack.Screen
                 name="Profile"
                 component={Profile}
+                options={{
+                  headerShown: false
+                }}
+              />
+              <Stack.Screen
+                name="AlterarSenha"
+                component={AlterarSenha}
                 options={{
                   headerShown: false
                 }}

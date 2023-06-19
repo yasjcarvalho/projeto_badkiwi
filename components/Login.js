@@ -13,6 +13,9 @@ function Login() {
   const navigateToProfile = () => {
     navigation.navigate('Profile')
   }
+  const navigateToAlterarSenha = () => {
+    navigation.navigate('AlterarSenha')
+  }
   return (
     <View style={styles.container}>
       <SafeAreaView maxLength={40}>
@@ -26,7 +29,7 @@ function Login() {
       </SafeAreaView>
 
       <View style={styles.buttons1}>
-        <Pressable>
+        <Pressable onPress={navigateToAlterarSenha}>
           <Text style={styles.esqueceu}>Esqueceu a senha?</Text>
         </Pressable>
 
