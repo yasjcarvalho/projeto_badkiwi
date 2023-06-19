@@ -1,74 +1,66 @@
-import { useState } from 'react';
-import { View, SafeAreaView, StyleSheet, Button} from 'react-native';
-import { TextInput, Pressable,  } from 'react-native-paper';
-import Icon from "react-native-vector-icons/AntDesign"
+import React from 'react'
+import { View, SafeAreaView, StyleSheet, Button, Text } from 'react-native'
+import { TextInput } from 'react-native-paper'
 
-
-const CadastroUsuario = ({navigation}) => {
-  
-    
+const CadastroUsuario = ({ navigation }) => {
   return (
-      <View style = {styles.container}>
-        <SafeAreaView maxLength={40}>
-          <TextInput  style={styles.input} placeholder="nome:" />
-        </SafeAreaView>
-        <SafeAreaView maxLength={40}>
-          <TextInput  style={styles.input} placeholder="Sobrenome:" />
-        </SafeAreaView>
-        <SafeAreaView maxLength={40}>
-          <TextInput style={styles.input} placeholder="Data de nascimento:" />
-        </SafeAreaView>
-        <SafeAreaView maxLength={40}>
-          <TextInput style={styles.input} placeholder="CPF:" />
-        </SafeAreaView>
-        <SafeAreaView maxLength={40}>
-          <TextInput style={styles.input} placeholder="Telefone:" />
-        </SafeAreaView>
-        <SafeAreaView maxLength={40}>
-          <TextInput activeOutlineColor={"red"} style={styles.input} placeholder="E-mail:" />
-        </SafeAreaView>
+    <View style={styles.container}>
+      <SafeAreaView maxLength={40}>
+        <Text style={styles.label}>Nome:</Text>
+        <TextInput style={styles.input} placeholder="Digite seu nome" />
+      </SafeAreaView>
+      <SafeAreaView maxLength={40}>
+        <Text style={styles.label}>Sobrenome:</Text>
+        <TextInput style={styles.input} placeholder="Digite seu sobrenome" />
+      </SafeAreaView>
+      <SafeAreaView maxLength={40}>
+        <Text style={styles.label}>Data de nascimento:</Text>
+        <TextInput style={styles.input} placeholder="Digite sua data de nas" />
+      </SafeAreaView>
+      <SafeAreaView maxLength={40}>
+        <Text style={styles.label}>CPF:</Text>
+        <TextInput style={styles.input} placeholder="Digite seu CPF" />
+      </SafeAreaView>
+      <SafeAreaView maxLength={40}>
+        <Text style={styles.label}>Telefone:</Text>
+        <TextInput style={styles.input} placeholder="Digite seu telefone" />
+      </SafeAreaView>
+      <SafeAreaView maxLength={40}>
+        <Text style={styles.label}>E-mail:</Text>
+        <TextInput style={styles.input} placeholder="Digite seu e-mail" />
+      </SafeAreaView>
 
-        <Button  
-         title="CADASTRAR"
-         color="#37567D"
-         onPress={() => {
+      <Button
+        title="CADASTRAR"
+        color="#37567D"
+        onPress={() => {
           native()
         }}
-        />
-          
-      </View>
-
-      
-
-  );
+      />
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
-
-  container:{
+  container: {
     flex: 1,
-    backgroundColor: "#6FB1FF",
-    justifyContent:"center",
-    alignItems:"center"
+    backgroundColor: '#6FB1FF',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-
-
-  input:{
-    height: 45,
+  input: {
+    height: 40,
     width: 250,
     borderRadius: 8,
     backgroundColor: '#fff',
     paddingHorizontal: 16,
-    marginBottom: 16,
+    marginBottom: 6
   },
-
-  cadastrar: {
-    textAlign: 'center',
-    marginVertical: 8,
-    backgroundColor:"37567D"
-  },
-
+  label: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#fff'
+  }
 })
 
-
-export default CadastroUsuario;
+export default CadastroUsuario

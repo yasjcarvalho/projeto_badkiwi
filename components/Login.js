@@ -10,14 +10,19 @@ function Login() {
   const navigateToCadastrarUsuario = () => {
     navigation.navigate('CadastrarUsuario')
   }
-
+  const navigateToProfile = () => {
+    navigation.navigate('Profile')
+  }
   return (
     <View style={styles.container}>
       <SafeAreaView maxLength={40}>
-        <TextInput style={styles.input} placeholder="E-mail" />
+        <Text style={styles.label}>E-mail:</Text>
+        <TextInput style={styles.input} placeholder="Digite seu e-mail" />
       </SafeAreaView>
       <SafeAreaView maxLength={40}>
-        <TextInput style={styles.input} placeholder="Senha:" />
+        <Text style={styles.label}>Senha:</Text>
+
+        <TextInput style={styles.input} placeholder="Digite sua senha" />
       </SafeAreaView>
 
       <View style={styles.buttons1}>
@@ -33,9 +38,7 @@ function Login() {
       <Button
         mode="contained"
         style={styles.buttons2}
-        onPress={() => {
-          native()
-        }}
+        onPress={navigateToProfile}
       >
         Entrar
       </Button>
