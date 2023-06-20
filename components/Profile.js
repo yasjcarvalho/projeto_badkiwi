@@ -1,18 +1,16 @@
-import { StyleSheet, View, Text, Image, Pressable } from 'react-native';
-
-
+import { StyleSheet, View, Text, Image, Pressable } from 'react-native'
 
 const Profile = () => {
   return (
     <View style={styles.container}>
       <View style={styles.body}>
         <View style={styles.picture}>
-        <View style={styles.usuario1}>
-          <Image
-            style={styles.fotoPerfil}
-            source={require('../assets/yo.png')}
-          />
-</View>
+          <View style={styles.usuario1}>
+            <Image
+              style={styles.fotoPerfil}
+              source={require('../assets/yo.png')}
+            />
+          </View>
           <View style={styles.usuario}>
             <Text>Yasmin Jandriele</Text>
             <Text>yasminjandriele@hotmail.com</Text>
@@ -44,54 +42,51 @@ const Profile = () => {
         </View>
       </View>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   body: {
     flex: 1,
-    backgroundColor: '#6FB1FF',
+    backgroundColor: '#F06F06'
   },
   picture: {
     flexDirection: 'row',
-    flex: 0.3,    
+    flex: 0.3
   },
-  
+
   fotoPerfil: {
     marginTop: 40,
     marginLeft: 5,
     borderRadius: 200,
     width: 140,
-    height: 140,
+    height: 140
   },
 
   usuario1: {
-    flex: 0.443,
-
+    flex: 0.443
   },
-  
+
   usuario: {
     flex: 0.567,
-        alignItems: 'flex-start', 
-        justifyContent: 'center'
+    alignItems: 'flex-start',
+    justifyContent: 'center'
   },
 
   buttons1: {
     flex: 0.5,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
-  
   buttons2: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 0.2,
-  
+    flex: 0.2
   },
 
   buttonPerfil: {
@@ -103,8 +98,7 @@ const styles = StyleSheet.create({
     height: 36,
     textAlign: 'center',
     paddingTop: 6,
-    border: 'solid #ffffff',
-
+    border: 'solid #ffffff'
   },
 
   buttonSenha: {
@@ -117,21 +111,20 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 6,
     border: 'solid #0ffffff',
-    marginTop: 10,
+    marginTop: 10
   },
 
-
   buttonSuporte: {
-      color: '000000',
-      backgroundColor: '#ffffff',
-      borderRadius: 10,
-      accessibilityLabel: 'Botão para alterar senha',
-      width: 150,
-      height: 36,
-      textAlign: 'center',
-      paddingTop: 6,
-      border: 'solid #0ffffff',
-      marginRight: 5,
+    color: '000000',
+    backgroundColor: '#ffffff',
+    borderRadius: 10,
+    accessibilityLabel: 'Botão para alterar senha',
+    width: 150,
+    height: 36,
+    textAlign: 'center',
+    paddingTop: 6,
+    border: 'solid #0ffffff',
+    marginRight: 5
   },
 
   buttonLGPD: {
@@ -144,13 +137,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 6,
     border: 'solid #0ffffff',
-    marginLeft: 5,
+    marginLeft: 5
+  }
+})
 
-},
-
-
-
-
-});
-
-export default Profile;
+export default Profile

@@ -29,7 +29,7 @@ const AlterarSenha = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6FB1FF',
+    backgroundColor: '#F06F06',
     justifyContent: 'center',
     alignItems: 'center'
   },

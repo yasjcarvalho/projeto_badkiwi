@@ -38,13 +38,9 @@ function Login() {
         </Pressable>
       </View>
 
-      <Button
-        mode="contained"
-        style={styles.buttons2}
-        onPress={navigateToProfile}
-      >
-        Entrar
-      </Button>
+      <Pressable onPress={navigateToProfile}>
+        <Text style={styles.buttons2}>Entrar</Text>
+      </Pressable>
     </View>
   )
 }
@@ -52,9 +48,13 @@ function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6FB1FF',
+    backgroundColor: '#F06F06',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+
+  label: {
+    fontWeight: 'bold'
   },
   input: {
     height: 45,
@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: '#fff',
     paddingHorizontal: 16,
-    marginBottom: 16
+    marginBottom: 16,
+    fontWeight: 'bold'
   },
   buttons1: {
     flexDirection: 'row',
@@ -73,11 +74,24 @@ const styles = StyleSheet.create({
   },
 
   cadastrar: {
-    marginLeft: 5
+    marginLeft: 5,
+    fontWeight: 'bold'
   },
 
   esqueceu: {
-    marginRight: 5
+    marginRight: 5,
+    fontWeight: 'bold'
+  },
+
+  buttons2: {
+    backgroundColor: '#fff',
+    fontWeight: 'bold',
+    color: '#000000',
+    borderRadius: 8,
+    height: 40,
+    width: 105,
+    textAlign: 'center',
+    paddingTop: 8
   }
 })
 
