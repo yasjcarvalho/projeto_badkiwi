@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, Text, Pressable } from 'react-native'
-import { Button, TextInput } from 'react-native-paper'
+import { TextInput } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native'
 
@@ -18,15 +18,18 @@ function Login() {
   }
   return (
     <View style={styles.container}>
-      <SafeAreaView maxLength={40}>
-        <Text style={styles.label}>E-mail:</Text>
-        <TextInput style={styles.input} placeholder="Digite seu e-mail" />
-      </SafeAreaView>
-      <SafeAreaView maxLength={40}>
-        <Text style={styles.label}>Senha:</Text>
+      <View style={styles.div1}>
+        <SafeAreaView maxLength={40}>
+          <Text style={styles.label}>E-mail:</Text>
+          <TextInput style={styles.input} placeholder="Digite seu e-mail" />
+        </SafeAreaView>
+        <SafeAreaView maxLength={40}>
+          <Text style={styles.label}>Senha:</Text>
 
-        <TextInput style={styles.input} placeholder="Digite sua senha" />
-      </SafeAreaView>
+          <TextInput style={styles.input} placeholder="Digite sua senha" />
+        </SafeAreaView>
+      </View>
+
 
       <View style={styles.buttons1}>
         <Pressable onPress={navigateToAlterarSenha}>
@@ -53,6 +56,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
+ 
+
   label: {
     fontWeight: 'bold'
   },
@@ -63,23 +68,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingHorizontal: 16,
     marginBottom: 16,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    marginTop: 5
   },
   buttons1: {
     flexDirection: 'row',
     width: 250,
     marginBottom: 16,
     justifyContent: 'center',
-    marginTop: 10
   },
 
   cadastrar: {
-    marginLeft: 5,
+    marginLeft: 20,
     fontWeight: 'bold'
   },
 
   esqueceu: {
-    marginRight: 5,
+    marginRight: 20,
     fontWeight: 'bold'
   },
 

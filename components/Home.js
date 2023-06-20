@@ -2,6 +2,7 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { TextInput } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/Ionicons'
+import axios from 'axios'
 
 const Home = ({ navigation }) => {
   return (
