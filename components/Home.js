@@ -1,10 +1,27 @@
-import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { View, StyleSheet, Text, Image } from 'react-native'
 import { TextInput } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/Ionicons'
 import axios from 'axios'
 
 const Home = ({ navigation }) => {
+  const [eventos, setEventos] = useState([])
+
+  useEffect(() => {
+    const fetchEventos = async () => {
+      try {
+        const response = await axios.get(
+          'https://648a14fc5fa58521cab0c3ad.mockapi.io/eventos'
+        )
+        setEventos(response.data)
+      } catch (error) {
+        console.error('Erro ao carregar os eventos:', error)
+      }
+    }
+
+    fetchEventos()
+  }, [])
+
   return (
     <View style={styles.container}>
       <View style={styles.searchBar}>
@@ -14,6 +31,21 @@ const Home = ({ navigation }) => {
           placeholderTextColor="#888"
         />
         <Icon name="search" size={24} color="#888" style={styles.searchIcon} />
+      </View>
+
+      <View>
+        {eventos.slice(0, 4).map(evento => (
+          <View key={evento.id}>
+            <Image
+              source={{ uri: evento.imagem }}
+              style={{ width: 200, height: 200 }}
+            />
+            <Text>{evento.nome}</Text>
+            <Text>Data: {evento.data_evento}</Text>
+            <Text>Horário: {evento.horario}</Text>
+            <Text>Local: {evento.local}</Text>
+          </View>
+        ))}
       </View>
     </View>
   )
