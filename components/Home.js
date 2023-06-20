@@ -38,7 +38,7 @@ const Home = ({ navigation }) => {
           <View key={evento.id}>
             <Image
               source={{ uri: evento.imagem }}
-              style={{ width: 200, height: 200 }}
+              style={{ width: 50, height: 50, border: 'solid' }}
             />
             <Text>{evento.nome}</Text>
             <Text>Data: {evento.data_evento}</Text>
