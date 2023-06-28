@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { View, ScrollView, StyleSheet, Text, Image, FlatList } from 'react-native'
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  Image,
+  FlatList
+} from 'react-native'
 import { TextInput } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/Ionicons'
 import axios from 'axios'
@@ -12,11 +19,12 @@ const Home = ({ navigation }) => {
       try {
         const response = await axios.get(
           'https://648a14fc5fa58521cab0c3ad.mockapi.io/eventos'
-        );
+        )
 
         response.data.forEach(e => {
-          e.imagem = "https://www.sp.senac.br/documents/51838645/51838647/GettyImages-858790856.jpg/9cf62117-05e1-ffc8-7c4a-a046cc318d21?version=1.0&t=1663166319568"
-        });
+          e.imagem =
+            'https://www.sp.senac.br/documents/51838645/51838647/GettyImages-858790856.jpg/9cf62117-05e1-ffc8-7c4a-a046cc318d21?version=1.0&t=1663166319568'
+        })
         setEventos(response.data)
       } catch (error) {
         console.error('Erro ao carregar os eventos:', error)
@@ -37,20 +45,18 @@ const Home = ({ navigation }) => {
         <Icon name="search" size={24} color="#888" style={styles.searchIcon} />
       </View>
 
-      <FlatList 
+      <FlatList
         data={eventos}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <View key={item.id} style={styles.eventoContainer}>
-            <Image
-              source={{ uri: item.imagem }}
-              style={styles.imagem}
-            />
+            <Image source={{ uri: item.imagem }} style={styles.imagem} />
             <Text style={styles.nome}>{item.nome}</Text>
             <Text>Data: {item.data_evento}</Text>
             <Text>Horário: {item.horario}</Text>
             <Text>Local: {item.local}</Text>
           </View>
-  )}/>
+        )}
+      />
     </View>
   )
 }
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     height: 50,
-    fontSize: 16,
+    fontSize: 16
   },
   searchIcon: {
     marginLeft: 8
